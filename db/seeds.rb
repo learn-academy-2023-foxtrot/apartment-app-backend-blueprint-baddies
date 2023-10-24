@@ -12,7 +12,8 @@ apartment1 = [
         price: '$3000',
         bedrooms: 4,
         bathrooms: 2,
-        pets: 'yes'
+        pets: 'yes',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg40Psu9oCDZMyXyQYcdzxW0OarFjElUqjKQ&usqp=CAU'
     },
     {
         street: '537 Avian way', 
@@ -23,7 +24,8 @@ apartment1 = [
         price: '$3000',
         bedrooms: 4,
         bathrooms: 3,
-        pets: 'yes'
+        pets: 'yes',
+        image: 'https://64.media.tumblr.com/e42ca95116010310891d3affc8017f4d/tumblr_inline_pbou2aDq7K1rx2ks6_500.jpg'
     }
 ]
 
@@ -37,7 +39,8 @@ apartment2 = [
         price: 'free',
         bedrooms: 1,
         bathrooms: .5,
-        pets: 'just rats'
+        pets: 'just rats',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Asylum_Buildings_%288136405492%29.jpg'
     },
     {
         street: '666 Arkham Asylum way', 
@@ -48,7 +51,8 @@ apartment2 = [
         price: 'free',
         bedrooms: 1,
         bathrooms: .5,
-        pets: 'just rats'
+        pets: 'just rats',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Asylum_Buildings_%288136405492%29.jpg'
     }
 ]
 
@@ -62,7 +66,8 @@ apartment3 = [
         price: '$3500',
         bedrooms:4 ,
         bathrooms: 3,
-        pets: 'yes'
+        pets: 'yes',
+        image: 'https://www.thehousedesigners.com/images/plans/01/URD/bulk/6583/the-destination-front-rendering_m.webp'
     },
     {
         street: '42 Fenton Way', 
@@ -73,7 +78,8 @@ apartment3 = [
         price: '1 soul',
         bedrooms: 1,
         bathrooms: 1,
-        pets: 'ghost pets only'
+        pets: 'ghost pets only',
+        image: 'https://static.wikia.nocookie.net/5yl/images/8/8b/Ghost_Zone-0.png/revision/latest?cb=20200102213915'
     }
 ]
 apt1.each do |apartment|
