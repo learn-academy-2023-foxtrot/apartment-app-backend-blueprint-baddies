@@ -1,7 +1,91 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password")
+user2 = User.where(email: "test2@example.com").first_or_create(password: "password", password_confirmation: "password")
+user3 = User.where(email: "test3@example.com").first_or_create(password: "password", password_confirmation: "password")
+
+apartment1 = [
+    {
+        street: '1026 york st', 
+        unit: 'A',
+        city: 'vallejo',
+        state: 'CA',
+        square_footage: 2000,
+        price: '$3000',
+        bedrooms: 4,
+        bathrooms: 2,
+        pets: 'yes'
+    },
+    {
+        street: '537 Avian way', 
+        unit: '1',
+        city: 'St Canard',
+        state: 'CA',
+        square_footage: 3500,
+        price: '$3000',
+        bedrooms: 4,
+        bathrooms: 3,
+        pets: 'yes'
+    }
+]
+
+apartment2 = [
+    {
+        street: '666 Arkham Asylum way', 
+        unit: 'cell A',
+        city: 'Gotham',
+        state: 'NY',
+        square_footage: 50,
+        price: 'free',
+        bedrooms: 1,
+        bathrooms: .5,
+        pets: 'just rats'
+    },
+    {
+        street: '666 Arkham Asylum way', 
+        unit: 'cell B',
+        city: 'Gotham',
+        state: 'NY',
+        square_footage: 50,
+        price: 'free',
+        bedrooms: 1,
+        bathrooms: .5,
+        pets: 'just rats'
+    }
+]
+
+apartment3 = [
+    {
+        street: '42 Fenton Way', 
+        unit: '1',
+        city: 'Amity Park',
+        state: 'Ohio',
+        square_footage: 2500,
+        price: '$3500',
+        bedrooms:4 ,
+        bathrooms: 3,
+        pets: 'yes'
+    },
+    {
+        street: '42 Fenton Way', 
+        unit: 'ghost zone',
+        city: 'Amity Park',
+        state: 'Ohio',
+        square_footage: 10000000,
+        price: '1 soul',
+        bedrooms: 1,
+        bathrooms: 1,
+        pets: 'ghost pets only'
+    }
+]
+apt1.each do |apartment|
+    user1.apartments.create(apartment)
+    p "creating #{apartment}"
+  end
+  apt2.each do |apartment|
+    user2.apartments.create(apartment)
+    p "creating #{apartment}"
+  end
+  apt3.each do |apartment|
+    user3.apartments.create(apartment)
+    p "creating #{apartment}"
+  end
+  
