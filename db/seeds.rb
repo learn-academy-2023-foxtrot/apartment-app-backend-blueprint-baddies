@@ -4,6 +4,7 @@ user3 = User.where(email: "test3@example.com").first_or_create(password: "passwo
 
 apartment1 = [
     {
+        user_id: 1,
         street: '1026 york st', 
         unit: 'A',
         city: 'vallejo',
@@ -16,6 +17,7 @@ apartment1 = [
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg40Psu9oCDZMyXyQYcdzxW0OarFjElUqjKQ&usqp=CAU'
     },
     {
+        user_id: 1,
         street: '537 Avian way', 
         unit: '1',
         city: 'St Canard',
@@ -31,6 +33,7 @@ apartment1 = [
 
 apartment2 = [
     {
+        user_id: 2,
         street: '666 Arkham Asylum way', 
         unit: 'cell A',
         city: 'Gotham',
@@ -38,11 +41,12 @@ apartment2 = [
         square_footage: 50,
         price: 'free',
         bedrooms: 1,
-        bathrooms: .5,
+        bathrooms: 0.5,
         pets: 'just rats',
         image: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Asylum_Buildings_%288136405492%29.jpg'
     },
-    {
+    {   
+        user_id: 2,
         street: '666 Arkham Asylum way', 
         unit: 'cell B',
         city: 'Gotham',
@@ -50,7 +54,7 @@ apartment2 = [
         square_footage: 50,
         price: 'free',
         bedrooms: 1,
-        bathrooms: .5,
+        bathrooms: 0.5,
         pets: 'just rats',
         image: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Asylum_Buildings_%288136405492%29.jpg'
     }
@@ -58,6 +62,7 @@ apartment2 = [
 
 apartment3 = [
     {
+        user_id: 3,
         street: '42 Fenton Way', 
         unit: '1',
         city: 'Amity Park',
@@ -70,6 +75,7 @@ apartment3 = [
         image: 'https://www.thehousedesigners.com/images/plans/01/URD/bulk/6583/the-destination-front-rendering_m.webp'
     },
     {
+        user_id: 3,
         street: '42 Fenton Way', 
         unit: 'ghost zone',
         city: 'Amity Park',
@@ -82,15 +88,15 @@ apartment3 = [
         image: 'https://static.wikia.nocookie.net/5yl/images/8/8b/Ghost_Zone-0.png/revision/latest?cb=20200102213915'
     }
 ]
-apt1.each do |apartment|
+apartment1.each do |apartment|
     user1.apartments.create(apartment)
     p "creating #{apartment}"
   end
-  apt2.each do |apartment|
+  apartment2.each do |apartment|
     user2.apartments.create(apartment)
     p "creating #{apartment}"
   end
-  apt3.each do |apartment|
+  apartment3.each do |apartment|
     user3.apartments.create(apartment)
     p "creating #{apartment}"
   end
