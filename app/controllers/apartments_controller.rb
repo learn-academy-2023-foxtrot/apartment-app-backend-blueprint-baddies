@@ -15,6 +15,6 @@ class ApartmentsController < ApplicationController
   
     private
     def apartment_params
-      params.require(:apartment).permit(:street, :city, :state, :square_footage, :email, :price, :bedrooms, :bathrooms, :pets, :image, :user_id)
+      params.require(:apartment).permit(:street, :unit, :city, :state, :square_footage, :price, :bedrooms, :bathrooms, :pets, :image, :user_id)
     end
   end
